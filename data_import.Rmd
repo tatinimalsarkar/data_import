@@ -21,7 +21,9 @@ litters_data = read_csv(file = "./data/FAS_litters.csv")
 ##   `Pups born alive` = col_integer(),
 ##   `Pups dead @ birth` = col_integer(),
 ##   `Pups survive` = col_integer()
-## )
+## 
+litters_data = janitor::clean_names(litters_data) 
+##)
 ```
 
 

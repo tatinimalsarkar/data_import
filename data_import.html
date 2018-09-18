@@ -149,7 +149,9 @@ $(document).ready(function () {
 ##   `Pups born alive` = col_integer(),
 ##   `Pups dead @ birth` = col_integer(),
 ##   `Pups survive` = col_integer()
-## )</code></pre>
+## 
+litters_data = janitor::clean_names(litters_data) 
+##)</code></pre>
 </div>
 
 
