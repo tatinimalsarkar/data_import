@@ -1,0 +1,27 @@
+---
+title: "data_import"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+```
+
+
+## Import FAS csv files
+```{r import_litter}
+litters_data = read_csv(file = "./data/FAS_litters.csv")
+## Parsed with column specification:
+## cols(
+##   Group = col_character(),
+##   `Litter Number` = col_character(),
+##   `GD0 weight` = col_double(),
+##   `GD18 weight` = col_double(),
+##   `GD of Birth` = col_integer(),
+##   `Pups born alive` = col_integer(),
+##   `Pups dead @ birth` = col_integer(),
+##   `Pups survive` = col_integer()
+## )
+```
+
+
