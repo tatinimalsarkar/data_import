@@ -152,6 +152,17 @@ $(document).ready(function () {
 ## 
 litters_data = janitor::clean_names(litters_data) 
 ##)</code></pre>
+<pre class="r"><code>pups_data = read_csv(file = &quot;./data/FAS_pups.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   `Litter Number` = col_character(),
+##   Sex = col_integer(),
+##   `PD ears` = col_integer(),
+##   `PD eyes` = col_integer(),
+##   `PD pivot` = col_integer(),
+##   `PD walk` = col_integer()
+## )</code></pre>
+<pre class="r"><code>pups_data = janitor::clean_names(pups_data)</code></pre>
 </div>
 
 
