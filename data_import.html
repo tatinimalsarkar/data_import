@@ -152,17 +152,22 @@ $(document).ready(function () {
 ## 
 litters_data = janitor::clean_names(litters_data) 
 ##)</code></pre>
-<pre class="r"><code>pups_data = read_csv(file = &quot;./data/FAS_pups.csv&quot;)</code></pre>
-<pre><code>## Parsed with column specification:
-## cols(
-##   `Litter Number` = col_character(),
-##   Sex = col_integer(),
-##   `PD ears` = col_integer(),
-##   `PD eyes` = col_integer(),
-##   `PD pivot` = col_integer(),
-##   `PD walk` = col_integer()
-## )</code></pre>
+<pre class="r"><code>pups_data = read_csv(file = &quot;./data/FAS_pups.csv&quot;, 
+                     col_types = cols(
+                       what = col_character(),
+                       'ok' = col_integer(),
+                       'now' = col_integer(),
+                       'iam' = col_integer(),
+                       'starting' = col_integer(),
+                       'togetit' = col_integer()
+                     ))</code></pre>
+<pre><code>## Warning: The following named parsers don't match the column names: what,
+## ok, now, iam, starting, togetit</code></pre>
 <pre class="r"><code>pups_data = janitor::clean_names(pups_data)</code></pre>
+<pre class="r"><code>library(readxl)</code></pre>
+<pre class="r"><code>mlb11_data = read_excel(&quot;./data/mlb11.xlsx&quot;, n_max = 20)</code></pre>
+<pre class="r"><code>library(haven)</code></pre>
+<pre class="r"><code>pulse_data = read_sas(&quot;./data/public_pulse_data.sas7bdat&quot;)</code></pre>
 </div>
 
 

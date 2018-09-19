@@ -27,7 +27,31 @@ litters_data = janitor::clean_names(litters_data)
 ```
 
 ```{r import_pups}
-pups_data = read_csv(file = "./data/FAS_pups.csv")
+pups_data = read_csv(file = "./data/FAS_pups.csv", 
+                     col_types = cols(
+                       what = col_character(),
+                       'ok' = col_integer(),
+                       'now' = col_integer(),
+                       'iam' = col_integer(),
+                       'starting' = col_integer(),
+                       'togetit' = col_integer()
+                     ))
 pups_data = janitor::clean_names(pups_data)
+```
+
+```{r load_excel}
+library(readxl)
+```
+
+```{r read_my_excel_file}
+mlb11_data = read_excel("./data/mlb11.xlsx", n_max = 20)
+```
+
+```{r load_sas}
+library(haven)
+```
+
+```{r read_my_sas_file}
+pulse_data = read_sas("./data/public_pulse_data.sas7bdat")
 ```
 
